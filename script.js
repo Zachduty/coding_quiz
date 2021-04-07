@@ -14,21 +14,28 @@ $(document).ready(function() {
             choices: ['quotes', 'curly brackets', 'parenthesis', 'square brackets'],
             answer: 'parenthesis'
         }, 
+        {
+            title: 'arryays in javascript can be used to store _______',
+            choices: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+            answer: 'all of the above'
+        },
+        {
+            title: 'string values must be enclosed within _____',
+            choices: ['commas', 'curly brackets', 'quotes', 'parenthesis'],
+            answer: 'parenthesis'
+        },
+        {
+            title: 'a very useful tool used during development and debugging for printing content to the debugger is:',
+            choices: ['javascript', 'terminal/bash', 'for loops', 'console log'],
+            answer: 'console log'
+        }
        
     ]
 
-
-    console.log('Good to go !!')
-    //1 make html !
     var title = $('<h1>');
  
-
-    //2 Dress it up how u like!! class names ids text ect...
     title.text(questions[0].title);
     $('#putStuffHere').append(title);
-      //3 Check thathtml onto the page!!
-
-
 
     for (let i = 0; i < questions[0].choices.length; i++) {
         console.log('looping ??', i)
@@ -40,17 +47,13 @@ $(document).ready(function() {
     }
 
 
-
     $('.choice').on('click', function(){
-        // console.log('U got clicked!!! btn u clicked!!', $(this).text())
-        // console.log('This is answer',questions[0].answer)
+        
 
 
         if($(this).text() === questions[0].answer){
-            // console.log('U got it right')
             correct++
         } else {
-            // console.log(' U r wrong!!')
             wrong++
         }
 
@@ -58,6 +61,9 @@ $(document).ready(function() {
         console.log('wrong : ', wrong)
 
     })
+
+
+     
   
 
 
