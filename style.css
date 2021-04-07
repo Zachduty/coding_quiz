@@ -1,3 +1,6 @@
+body {
+    text-align: center;
+}
 
 #title {
     background-color: burlywood;
@@ -25,4 +28,37 @@
     height: 200px;
     width: 500px;
     color: rgb(30, 7, 179);
+}
+
+#correct, #wrong {
+    background-color: burlywood;
+    border-color: cadetblue;
+    border-width: 5px;
+    border-style: groove;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 25px auto;
+    color: rgb(30, 7, 179);
+}
+
+#start {
+    font-size: 25px;
+}
+
+#timer {
+    background-color: burlywood;
+    border-color: cadetblue;
+    border-width: 5px;
+    border-style: groove;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 25px auto;
+    color: rgb(30, 7, 179);
+}
+
+.gameOver {
+
+font-size: 100px;
 }
