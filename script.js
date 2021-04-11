@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   $("#start").on("click", function() {
     console.log("working")
-    //startTimer()
+    startTimer()
     displayQuestion()
   })
 
@@ -14,8 +14,9 @@ $(document).ready(function () {
      setInterval(function () {
          maxTime --
          $("#timer").text("Timer : " + maxTime)
+         
 
-         console.log('Timer ??? ticking down ??', maxTime)
+        //  console.log('Timer ??? ticking down ??', maxTime)
 
      }, 1000)  
   }
@@ -87,7 +88,6 @@ $(document).ready(function () {
     questionNum++
 
     if (questionNum >= 5) {
-        // console.log("game over")
         gameOver()
 
     } else { 
@@ -121,6 +121,4 @@ $(document).ready(function () {
     $("#putStuffHere").text("GAME OVER");
   }
 
-
-  // $('#title').text('I CHANGED THIS WW JQUERY');
 });
