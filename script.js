@@ -67,6 +67,11 @@ $(document).ready(function () {
     }
   }
 
+  $("#start").on("click", function() {
+    console.log("working")
+    //startTimer()
+    displayQuestion()
+  })
 
 
   $(document).on("click", ".choice",function () {
@@ -87,19 +92,22 @@ $(document).ready(function () {
     }
 
 
-
+    console.log("Correct : ", correct);
+    console.log("wrong : ", wrong);
+    $("#correct").text("Correct : " + correct)
+    $("#wrong").text("Wrong : " + wrong)
 
     console.log("Correct : ", correct);
     console.log("wrong : ", wrong);
     $("#correct").text("Correct : " + correct)
     $("#wrong").text("Wrong : " + wrong)
 
-
   });
 
 
-  function gameOver() {
 
+
+  function gameOver() {
 
     var gameOverText = $("<h1>");
     var saveButton = $("<button>");
@@ -113,6 +121,7 @@ $(document).ready(function () {
 
     $("#putStuffHere").append(title);
 
+    $("#putStuffHere").append(title);
 
     $("#putStuffHere").empty();
     $("#putStuffHere").text("GAME OVER");

@@ -1,70 +1,62 @@
 body {
-    text-align: center;
+  text-align: center;
 }
 
 #title {
-    background-color: burlywood;
-    border-color: cadetblue;
-    border-width: 5px;
-    border-style: groove;
-    width: 250px;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 25px auto;
-    color: rgb(30, 7, 179);
+  background-color: burlywood;
+  border-color: cadetblue;
+  border-width: 5px;
+  border-style: groove;
+  width: 250px;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 25px auto;
+  color: rgb(30, 7, 179);
 }
-
-
 
 #putStuffHere {
-    background-color: burlywood;
-    border-style: groove;
-    border-width: 5px;
-    border-color: cadetblue;
-    display: block;
-    margin: 25px auto;
-    padding: 10px 10px;
-    text-align: center;
-    height: 200px;
-    width: 500px;
-    color: rgb(30, 7, 179);
+  background-color: burlywood;
+  border-style: groove;
+  border-width: 5px;
+  border-color: cadetblue;
+  display: block;
+  margin: 25px auto;
+  padding: 10px 10px;
+  text-align: center;
+  height: 200px;
+  width: 500px;
+  color: rgb(30, 7, 179);
 }
 
-#correct, #wrong {
-    background-color: burlywood;
-    border-color: cadetblue;
-    border-width: 5px;
-    border-style: groove;
-    width: 250px;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 25px auto;
-    color: rgb(30, 7, 179);
+#correct,
+#wrong {
+  background-color: burlywood;
+  border-color: cadetblue;
+  border-width: 5px;
+  border-style: groove;
+  width: 250px;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 25px auto;
+  color: rgb(30, 7, 179);
 }
 
 #start {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 #timer {
-    background-color: burlywood;
-    border-color: cadetblue;
-    border-width: 5px;
-    border-style: groove;
-    width: 250px;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 25px auto;
-    color: rgb(30, 7, 179);
+  background-color: burlywood;
+  border-color: cadetblue;
+  border-width: 5px;
+  border-style: groove;
+  width: 250px;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 25px auto;
+  color: rgb(30, 7, 179);
 }
 
 .gameOver {
-
-    font-size: 100px;
-}
-
-.inputName {
-    
-
-
+  font-size: 100px;
 }
