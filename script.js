@@ -3,6 +3,7 @@ $(document).ready(function () {
   var wrong = 0;
   var questionNum = 0;
   var maxTime = 60
+  var timer 
 
   $("#start").on("click", function() {
     startTimer()
@@ -10,16 +11,11 @@ $(document).ready(function () {
   })
 
   function startTimer() {
-     setInterval(function () {
+      timer = setInterval(function () {
          maxTime --
          $("#timer").text("Timer : " + maxTime)
-
      }, 1000)  
   }
-
-
-  
-
 
   var questions = [
     {
@@ -78,11 +74,13 @@ $(document).ready(function () {
       correct++;
     } else {
       wrong--;
+      maxTime = maxTime -10
     }
     questionNum++
 
     if (questionNum >= 5) {
-        gameOver()
+        gameOver();
+        clearInterval(timer)
 
     } else { 
         displayQuestion()
@@ -104,16 +102,28 @@ $(document).ready(function () {
 
 
     var gameOverText = $("<h1>");
+    var saveButton = $("<button>");
+    var inputName = $("<input>")
     
     gameOverText.text("GAME OVER");
     gameOverText.addClass("gameOver")
+    saveButton.text("INPUT NAME")
+    saveButton.addClass("save")
+    inputName.addClass("inputName")
 
     $("#putStuffHere").append(title);
 
 
     $("#putStuffHere").empty();
     $("#putStuffHere").text("GAME OVER");
+    $("#putStuffHere").append(saveButton)
+    $("#putStuffHere").append(inputName)
   }
+
+  $(document).on("click", ".save", function() {
+    localStorage.setItem ($(".inputName").val(), maxTime)
+    window.location.replace("/highscore.html")
+  })
 
 });
 
