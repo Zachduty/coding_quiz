@@ -5,7 +5,6 @@ $(document).ready(function () {
   var maxTime = 60
 
   $("#start").on("click", function() {
-    console.log("working")
     startTimer()
     displayQuestion()
   })
@@ -14,9 +13,6 @@ $(document).ready(function () {
      setInterval(function () {
          maxTime --
          $("#timer").text("Timer : " + maxTime)
-         
-
-        //  console.log('Timer ??? ticking down ??', maxTime)
 
      }, 1000)  
   }
@@ -68,8 +64,6 @@ $(document).ready(function () {
     $("#putStuffHere").append(title);
 
     for (let i = 0; i < questions[questionNum].choices.length; i++) {
-      console.log("looping ??", i);
-
       var choiceBtn = $("<button>");
       choiceBtn.text(questions[questionNum].choices[i]);
       choiceBtn.attr("class", "choice");
@@ -83,7 +77,7 @@ $(document).ready(function () {
     if ($(this).text() === questions[questionNum].answer) {
       correct++;
     } else {
-      wrong++;
+      wrong--;
     }
     questionNum++
 
@@ -122,3 +116,4 @@ $(document).ready(function () {
   }
 
 });
+
