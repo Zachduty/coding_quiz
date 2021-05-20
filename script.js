@@ -2,19 +2,19 @@ $(document).ready(function () {
   var correct = 0;
   var wrong = 0;
   var questionNum = 0;
-  var maxTime = 60
-  var timer 
+  var maxTime = 60;
+  var timer;
 
-  $("#start").on("click", function() {
-    startTimer()
-    displayQuestion()
-  })
+  $("#start").on("click", function () {
+    startTimer();
+    displayQuestion();
+  });
 
   function startTimer() {
-      timer = setInterval(function () {
-         maxTime --
-         $("#timer").text("Timer : " + maxTime)
-     }, 1000)  
+    timer = setInterval(function () {
+      maxTime--;
+      $("#timer").text("Timer : " + maxTime);
+    }, 1000);
   }
 
   var questions = [
@@ -55,7 +55,7 @@ $(document).ready(function () {
     $("#putStuffHere").empty();
 
     var title = $("<h1>");
-    
+
     title.text(questions[questionNum].title);
     $("#putStuffHere").append(title);
 
@@ -67,53 +67,43 @@ $(document).ready(function () {
     }
   }
 
-  $("#start").on("click", function() {
-    //startTimer()
-    displayQuestion()
-  })
+  $("#start").on("click", function () {
+    displayQuestion();
+  });
 
-
-  $(document).on("click", ".choice",function () {
+  $(document).on("click", ".choice", function () {
     if ($(this).text() === questions[questionNum].answer) {
       correct++;
     } else {
       wrong--;
-      maxTime = maxTime -10
+      maxTime = maxTime - 10;
     }
-    questionNum++
+    questionNum++;
 
     if (questionNum >= 5) {
-        gameOver();
-        clearInterval(timer)
-
-    } else { 
-        displayQuestion()
+      gameOver();
+      clearInterval(timer);
+    } else {
+      displayQuestion();
     }
 
+    $("#correct").text("Correct : " + correct);
+    $("#wrong").text("Wrong : " + wrong);
 
-    $("#correct").text("Correct : " + correct)
-    $("#wrong").text("Wrong : " + wrong)
-
-  
-    $("#correct").text("Correct : " + correct)
-    $("#wrong").text("Wrong : " + wrong)
-
+    $("#correct").text("Correct : " + correct);
+    $("#wrong").text("Wrong : " + wrong);
   });
 
-
-
-
   function gameOver() {
-
     var gameOverText = $("<h1>");
     var saveButton = $("<button>");
-    var inputName = $("<input>")
-    
+    var inputName = $("<input>");
+
     gameOverText.text("GAME OVER");
-    gameOverText.addClass("gameOver")
-    saveButton.text("INPUT NAME")
-    saveButton.addClass("save")
-    inputName.addClass("inputName")
+    gameOverText.addClass("gameOver");
+    saveButton.text("INPUT NAME");
+    saveButton.addClass("save");
+    inputName.addClass("inputName");
 
     $("#putStuffHere").append(title);
 
@@ -121,14 +111,12 @@ $(document).ready(function () {
 
     $("#putStuffHere").empty();
     $("#putStuffHere").text("GAME OVER");
-    $("#putStuffHere").append(saveButton)
-    $("#putStuffHere").append(inputName)
+    $("#putStuffHere").append(saveButton);
+    $("#putStuffHere").append(inputName);
   }
 
-  $(document).on("click", ".save", function() {
-    localStorage.setItem ($(".inputName").val(), maxTime)
-    window.location.replace("/highscore.html")
-  })
-
+  $(document).on("click", ".save", function () {
+    localStorage.setItem($(".inputName").val(), maxTime);
+    window.location.replace("/highscore.html");
+  });
 });
-

@@ -1,12 +1,10 @@
 $(document).ready(function () {
   const items = { ...localStorage };
-  console.log("???", items);
 
   var newArray = [];
   for (const key in items) {
     if (Object.hasOwnProperty.call(items, key)) {
       const element = items[key];
-      // $("#highScores").append(element, key)
       newArray.push({ [key]: parseInt(items[key]) });
     }
   }
