@@ -60,3 +60,44 @@ body {
 .gameOver {
   font-size: 100px;
 }
+
+#hs {
+    background-color: burlywood;
+    border-style: groove;
+    border-width: 5px;
+    border-color: cadetblue;
+    display: block;
+    margin: 25px auto;
+    padding: 10px 10px;
+    text-align: center;
+    height: auto;
+    width: 500px;
+    color: rgb(30, 7, 179);
+  }
+
+  #highScores {
+    background-color: burlywood;
+    border-style: groove;
+    border-width: 5px;
+    border-color: cadetblue;
+    display: block;
+    margin: 25px auto;
+    padding: 10px 10px;
+    text-align: center;
+    height: auto;
+    width: 500px;
+    color: rgb(30, 7, 179);
+  }
+
+  .inputName {
+    text-align: center;  
+    border: 1px solid black;  
+    width: 175px;  
+    height: auto;   
+  }
+
+  .save {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
